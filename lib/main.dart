@@ -11,7 +11,6 @@ void main() {
 class MyApp extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return _MyAppState();
   }
 
@@ -19,7 +18,6 @@ class MyApp extends StatefulWidget {
 
 
 class _MyAppState extends State<MyApp> {
-  //final List<String> _items = new List();// ["1","2","3"];
   String _value;
 
   @override
@@ -101,11 +99,6 @@ class _MyAppState extends State<MyApp> {
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () async {
-            //setState(() {
-            //  _items.add(_value);
-            //});
-            //print(_items);
-            // Составляем сообщение по введенному тексту
             Message thismessage = Message(content: _value);
             // Добавляем новое сообщение в базу данных
             await DBProvider.db.newMessage(thismessage);
